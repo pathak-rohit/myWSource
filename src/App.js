@@ -13,7 +13,7 @@ function App() {
   const projects = [
     {
       title: "Enterprise Software Modernization",
-      description: "Modernizing the world's #1 enterprise level design software. Creating new user interaction paradigms, improving productivity by leaps and bounds.",
+      description: "Modernizing the world's #1 enterprise level design software. Adapting to new technologies and creating new user interaction paradigms, improving performance and productivity by leaps and bounds.",
       icon: Boxes
     },
     {
