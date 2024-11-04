@@ -1,36 +1,26 @@
-name: Build and Deploy React App
-
+name: Build and Deploy to GitHub Pages
 on:
+  workflow_dispatch:  # Allows you to manually trigger the build in the Actions tab
   push:
     branches:
-      - main
-
+      - main  # This will also trigger the build when you push changes to 'main'
 jobs:
-  build-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Check out the code
         uses: actions/checkout@v2
-
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
-
+          node-version: '16'  # Specify the Node.js version
       - name: Install dependencies
         run: npm install
-
-      - name: Build the React app
+      - name: Build the project
         run: npm run build
-
       - name: Deploy to GitHub Pages
-        run: |
-          rm -rf .git
-          mv build/* .
-          git init
-          git add .
-          git commit -m "Deploy React app to GitHub Pages"
-          git remote add origin https://github.com/pathak-rohit/myWSource.git
-          git push --force origin main
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
 
