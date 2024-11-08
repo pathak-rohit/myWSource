@@ -66,7 +66,10 @@ function App() {
                 This is perhaps one of the coolest software products you have never heard of! (Unless you work in the oil and gas or heavy engineering industry, of course.)
               </p>
               <p>
-                If you are a recruiter, you can find my LinkedIn below. <p>Here is my a link to my resume. <a href="https://app.enhancv.com/share/c313e438/" target="_blank" rel="noopener noreferrer">Resume</a></p>
+                If you are a recruiter, you can find my LinkedIn below. 
+              </p>
+              <p>
+                Here is my a link to my  <a href="https://app.enhancv.com/share/c313e438/" target="_blank" rel="noopener noreferrer">resume.</a>
               </p>
               <p className="text-gray-500 italic">
                 BTW this website is still a work in progress.
